@@ -6,6 +6,7 @@ import serviceRoutes from "./routes/serviceRoutes.js";
 import authRoutes from "./routes/authRoutes.js";
 import adminRoutes from "./routes/adminRoutes.js";
 import eventsRoutes from "./routes/eventsRoutes.js";
+import caseStudyRoutes from "./routes/caseStudyRoutes.js";
 import connectDB from "./services/mongodbService.js";
 import corsMiddleware from "./middleware/corsMiddleware.js";
 
@@ -31,6 +32,7 @@ app.use("/api/services", serviceRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/admin", adminRoutes);
 app.use("/api/events", eventsRoutes);
+app.use("/api/case-studies", caseStudyRoutes);
 
 // Start server
 app.listen(port, () => {
