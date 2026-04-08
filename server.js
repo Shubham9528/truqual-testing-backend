@@ -2,6 +2,7 @@ import "dotenv/config";
 import express from "express";
 import contactRoutes from "./routes/contactRoutes.js";
 import blogRoutes from "./routes/blogRoutes.js";
+import serviceRoutes from "./routes/serviceRoutes.js";
 import authRoutes from "./routes/authRoutes.js";
 import adminRoutes from "./routes/adminRoutes.js";
 import eventsRoutes from "./routes/eventsRoutes.js";
@@ -26,6 +27,7 @@ app.get("/", (req, res) => {
 
 app.use("/api/contact", contactRoutes);
 app.use("/api/blogs", blogRoutes);
+app.use("/api/services", serviceRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/admin", adminRoutes);
 app.use("/api/events", eventsRoutes);
