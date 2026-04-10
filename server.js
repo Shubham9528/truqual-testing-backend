@@ -9,6 +9,8 @@ import adminRoutes from "./routes/adminRoutes.js";
 import eventsRoutes from "./routes/eventsRoutes.js";
 import caseStudyRoutes from "./routes/caseStudyRoutes.js";
 import teamMemberRoutes from "./routes/teamMemberRoutes.js";
+import jobOpeningRoutes from "./routes/jobOpeningRoutes.js";
+import jobCandidateRoutes from "./routes/jobCandidateRoutes.js";
 import connectDB from "./services/mongodbService.js";
 import corsMiddleware from "./middleware/corsMiddleware.js";
 
@@ -37,6 +39,8 @@ app.use("/api/admin", adminRoutes);
 app.use("/api/events", eventsRoutes);
 app.use("/api/case-studies", caseStudyRoutes);
 app.use("/api/team", teamMemberRoutes);
+app.use("/api/job-openings", jobOpeningRoutes);
+app.use("/api/job-candidates", jobCandidateRoutes);
 
 // Start server
 app.listen(port, () => {
